@@ -46,3 +46,54 @@ subplot(247)
 plot(n,x7(n1:n2))
 
 //STEP SEQUENCE
+clc
+clear
+t=-10:10
+x1=[zeros(1,10) 1 ones(1,10)]
+plot2d3(t,x1)
+title("Step Sequence")
+xlabel("Time-->")
+ylabel("Magnitude-->")
+
+//UNDER-DAMPED EXPONENTIAL SIGNAL
+clc;
+clear;
+f=1;
+t=0:0.01/f:10/f;
+x1=exp(-t);
+y=sin(2*%pi*t*f);
+x2=-exp(-t);
+z=x1.*y;
+plot(t,z);
+plot(t,x2);
+plot(t,x1);
+title('Underdamped Exponential Signal Graph','fontsize',4);
+xlabel("Time-->");
+ylabel("Magnitude-->");
+
+//UNDER-DAMPED EXPONENTIAL SIGNAL TILL 20sec
+clc
+clear
+f=1
+t=0:0.01/f:20/f
+x1=exp(-t)
+y=sin(2*%pi*t*f)
+x2=-exp(-t)
+z=x1.*y
+plot(t,z)
+
+//rect(n/10)
+N=5
+k=-5:5
+X=[ones(1,5) 1 ones(1,5)]
+plot2d3(k,X)
+
+//tri(n/14)
+T=7
+m=-7:7
+Y=[]
+for i=1:length(m)
+ Y(i)= 1 - (sqrt(m(i)^2)/T)
+end
+disp(Y)
+plot2d3(m,Y)
