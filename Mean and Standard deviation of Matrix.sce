@@ -1,4 +1,4 @@
-#Code for mean and standard deviation of the matrix
+//Code for mean and standard deviation of the matrix
 
 function[mr,mc,sr,sc]=mat(A)
     mr=mean(a,'r')
